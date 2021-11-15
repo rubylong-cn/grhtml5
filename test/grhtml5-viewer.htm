@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>锐浪HTML5报表 - 开源测试</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script src="../src/grconst.js"></script>
+    <script src="../src/grcommon.js"></script>
+    <script src="../src/grformat.js"></script>
+    <script src="../src/grexpression.js"></script>
+    <script src="../src/grdom.js"></script>
+    <script src="../src/grcrosstab.js"></script>
+    <script src="../src/grchart.js"></script>
+    <script src="../src/grviewer.js"></script>
+
+    <script language="javascript" type="text/javascript">
+        function window_onload() {
+            //创建报表显示器，参数指定其在网页中的占位标签的ID，关联的报表模板URL，关联的报表数据URL
+            var reportViewer = window.rubylong.grhtml5.insertReportViewer("report_holder", "list.grf", "list.txt");
+
+            reportViewer.start(); //启动报表运行，生成报表
+        }
+    </script>
+</head>
+<body onload="window_onload()">
+    <div id="report_holder">
+    </div>
+</body>
+</html>
